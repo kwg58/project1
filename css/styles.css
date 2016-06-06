@@ -1,0 +1,51 @@
+#main {
+  min-height: 600px;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-flow: row;
+        border: 1px solid black;
+}
+#main > .pix {
+  margin: 4px;
+        padding: 5px;
+  flex: 3 1 50%;
+  margin: 10px;
+  order: 2;
+  border: 1px solid green;
+}
+#main > .buttons {
+  margin: 4px;
+        padding: 5px;
+  flex: 2 1 20%;
+  order: 3;
+  border: 1px solid blue;
+}
+#main > .left {
+  margin: 4px;
+        padding: 5px;
+        flex: 1 1 15%;
+        order: 1;
+        border: 1px solid red;
+}
+#main > .right {
+  margin: 4px;
+        padding: 5px;
+        flex: 1 1 15%;
+        order: 4;
+        border: 1px solid red;
+}
+.pix .flexpixcontainer {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  background-color: lightgray;
+  flex-flow: row wrap;
+}
+.pix .flexpixitem {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid red;
+background-color: blue;
+}
