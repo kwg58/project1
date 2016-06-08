@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Oswald|Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/test.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="scripts/concentration.js"></script>
+  <title>Babyface Concentration</title>
+<script>
+var init = function() {
+  var card = document.getElementById('card');
+
+  document.getElementById('flip').addEventListener( 'click', function(){
+    card.toggleClassName('flipped');
+  }, false);
+};
+// or use toggleClassName
+
+window.addEventListener('DOMContentLoaded', init, false);
+</script>
+</head>
+<body>
+  <!-- <div id="wrapper"> -->
+  <header>
+    Header
+  </header>
+  <section class="container">
+    <div id="tile0 class=flipped">
+      <figure class="front"><img src="./images/gg1-100.jpg"></figure>
+      <figure class="back" src="./images/bc-100.png"></figure>
+    </div>
+    <div id="tile1">
+      <figure class="front"><img src="./images/gg2-100.jpg"></figure>
+      <figure class="back" src="./images/bc-100.png"></figure>
+    </div>
+    <div id="tile2">
+      <figure class="front"><img src="./images/gg3-100.jpg"></figure>
+      <figure class="back" src="./images/bc-100.png"></figure>
+    </div>
+    <div id="tile3">
+      <figure class="front"><img src="./images/mg1-100.jpg"<style="border: 1px solid blue;"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile4">
+      <figure class="front"><img src="./images/mg2-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile5">
+      <figure class="front"><img src="./images/ev1-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile6">
+      <figure class="front"><img src="./images/ev2-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile7">
+      <figure class="front"><img src="./images/ev3-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile8">
+      <figure class="front"><img src="./images/gg1-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile9">
+      <figure class="front"><img src="./images/gg2-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile10">
+      <figure class="front"><img src="./images/gg3-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile11">
+      <figure class="front"><img src="./images/mg1-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile12">
+      <figure class="front"><img src="./images/mg2-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile13">
+      <figure class="front"><img src="./images/ev1-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile14">
+      <figure class="front"><img src="./images/ev2-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+    <div id="tile15">
+      <figure class="front"><img src="./images/ev3-100.jpg"></figure>
+      <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
+    </div>
+  </section>
+  <footer>
+    Footer
+  </footer>
+</body>
+</html>

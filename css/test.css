@@ -1,0 +1,43 @@
+[id*='tile'] {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    border: 1px solid #73AD21;
+  }
+[id*='tile'] {
+  /*border: 1px solid red;*/
+}
+  .container {
+    width: 500px;
+    position: relative;
+    perspective: 800px;
+    border: 1px solid black;
+  }
+  [id*='tile'] {
+    width: 100px;
+    height: 100px;
+    /*position: absolute;*/
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    /*transform-origin: right center; */
+  }
+  [id*='tile'] figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  [id*='tile'] .front {
+    /*background: red;*/
+  }
+  [id*='tile'] .back {
+    /*background: blue;*/
+    transform: rotateY( 180deg );
+  }
+
+  [id*='tile'].flipped {
+    transform: rotateY( 180deg );
+  }*/
