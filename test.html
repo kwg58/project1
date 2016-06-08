@@ -5,20 +5,9 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald|Lato' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/test.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="scripts/concentration.js"></script>
-  <title>Babyface Concentration</title>
-<script>
-var init = function() {
-  var card = document.getElementById('card');
+  <script src="scripts/test.js"></script>
+  <title>Test Flip Babyface Concentration</title>
 
-  document.getElementById('flip').addEventListener( 'click', function(){
-    card.toggleClassName('flipped');
-  }, false);
-};
-// or use toggleClassName
-
-window.addEventListener('DOMContentLoaded', init, false);
-</script>
 </head>
 <body>
   <!-- <div id="wrapper"> -->
@@ -26,17 +15,17 @@ window.addEventListener('DOMContentLoaded', init, false);
     Header
   </header>
   <section class="container">
-    <div id="tile0 class=flipped">
+    <div id="tile0">
       <figure class="front"><img src="./images/gg1-100.jpg"></figure>
-      <figure class="back" src="./images/bc-100.png"></figure>
+      <figure class="back"><src="./images/bc-100.png"></figure>
     </div>
     <div id="tile1">
-      <figure class="front"><img src="./images/gg2-100.jpg"></figure>
-      <figure class="back" src="./images/bc-100.png"></figure>
+      <figure class="front"><img src="./images/bc-100.png"></figure>
+      <figure class="back"><src="./images/bc-100.png"></figure>
     </div>
     <div id="tile2">
       <figure class="front"><img src="./images/gg3-100.jpg"></figure>
-      <figure class="back" src="./images/bc-100.png"></figure>
+      <figure class="back"><src="./images/bc-100.png"></figure>
     </div>
     <div id="tile3">
       <figure class="front"><img src="./images/mg1-100.jpg"<style="border: 1px solid blue;"></figure>
@@ -91,8 +80,20 @@ window.addEventListener('DOMContentLoaded', init, false);
       <!-- <figure class="back" src="./images/bc-100.png"></figure> -->
     </div>
   </section>
+    <p><button id="flip" onclick="flip()">Flip Card</button></p>
   <footer>
     Footer
   </footer>
 </body>
+<script>
+var flip = function() {
+  var card = document.getElementById("tile15");
+  console.log("card: " + card);
+    // card.toggleClass("flipped");
+    card.classList.toggle("flipped");
+};
+// or use toggleClassName
+
+// window.addEventListener('DOMContentLoaded', init, false);
+</script>
 </html>

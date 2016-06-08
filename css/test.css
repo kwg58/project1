@@ -4,6 +4,7 @@
     height: 100px;
     margin: 2px;
     border: 1px solid #73AD21;
+    background-color: green;
   }
 [id*='tile'] {
   /*border: 1px solid red;*/
