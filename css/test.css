@@ -43,33 +43,35 @@ footer {
 #container {
   display: block;
   /*margin: 50px 150px;*/
-  background-color: white;
+  background-color: tan;
   /*border-radius: 20px;*/
   height: 500px;
   min-height: 500px;
   width:  1000px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 /* leftmost content column*/
 #container > .left {
   display: inline-block;
   width: 20%;
   height: inherit;
-  border: 1px solid green;
+  background-color: inherit;
+  /*border: 1px solid green;*/
 }
 /* center content column*/
 #container > .center {
   display: inline-block;
   width: 50%;
   height: inherit;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
 }
 /* rightmost content column*/
 #container > .right {
   display: inline-block;
   width: 24%;
   height: inherit;
-  border: 1px solid red;
+  background-color: inherit;
+  /*border: 1px solid red;*/
 }
 /*#controls {
 width: 450px;

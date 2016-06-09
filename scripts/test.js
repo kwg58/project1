@@ -31,6 +31,7 @@ function shuffleArray(array) {            //borrowed from the Internet
   return array;
 }
 function buildBoard() {
+  tileStatus = "";
   $("#buildhere").html("");
   pointers = shuffleArray(["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]);
   var imgSource = "./images/";
@@ -53,13 +54,14 @@ function startGame() {
   matches=0;           // used to count matches, game wins when set to 8
   timerid = setInterval(updateTime, 1000);  //start the game timer
   imgPath = "./images/";
-  openSeconds = 3000;  // milliseconds to leave pictures open before flipping them.
+  openSeconds = 2000;  // milliseconds to leave pictures open before flipping them.
   // buildBoard();
   if (tileStatus == "flipped") {
     // buildBoard();
     $("[id^='tile']").addClass("flipped");
   }  else {
     $("[id^='tile']").removeClass("flipped");
+    tileStatus = "";
   }
 }
 function clickTile(cellID) {
@@ -92,6 +94,7 @@ function clickTile(cellID) {
 // }
 function gameWon() {
   clearInterval(timerid);
+  document.getElementById("timer").innerHTML = seconds;
   alert("You've won! It only took you " + seconds + " seconds");
 }
 var updateTime = function() {
