@@ -15,7 +15,7 @@ $( document ).ready(function() {
 
   //event handler for start button clicking
   $("#start").on("click", function() {
-    $(this).innerHTML= "Play Again";
+    $(this).text("Play Again");
     startGame();
     // $(this).prop('disabled', true);
 
@@ -94,10 +94,10 @@ function clickTile(cellID) {
 // }
 function gameWon() {
   clearInterval(timerid);
-  document.getElementById("timer").innerHTML = seconds;
   alert("You've won! It only took you " + seconds + " seconds");
 }
 var updateTime = function() {
-  document.getElementById("timer").innerHTML = seconds;
+  // $("timer").text(seconds);
   seconds+=1;
+  document.getElementById("timer").innerHTML = seconds;
 }
