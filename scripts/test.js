@@ -1,3 +1,5 @@
+// AM: Should probably rename this file to something else so nobody disregards it as test code!
+
 $( document ).ready(function() {
 
   imgArray = ["gg1-100.jpg", "gg2-100.jpg", "gg3-100.jpg", "ev1-100.jpg", "ev2-100.jpg", "ev3-100.jpg", "mg1-100.jpg", "mg2-100.jpg",
@@ -15,7 +17,7 @@ $( document ).ready(function() {
 
   //event handler for start button clicking
   $("#start").on("click", function() {
-    $(this).innerHTML= "Play Again";
+    $(this).text("Play Again");
     startGame();
     // $(this).prop('disabled', true);
 
@@ -30,6 +32,7 @@ function shuffleArray(array) {            //borrowed from the Internet
   }
   return array;
 }
+// AM: Very interesting buildBoard function. Dig it!
 function buildBoard() {
   tileStatus = "";
   $("#buildhere").html("");
@@ -47,6 +50,11 @@ function buildBoard() {
 function startGame() {
   //start the game-timer
   //enable clicking
+  // AM: It looks like that if I click fast enough, I can sneak in more than two clicks in a turn.
+  // AM: I would make use of this `clickOnce` (or some variable like it) in your clicking logic.
+  // AM: Essentially we want to say that, if the user has clicked twice, we don't want process any additional clicks until the next turn is ready.
+  // AM: What exactly "ready" means is up to you. But it seems like it has something to do with that CSS flip transition ending.
+  // AM: Happy to talk more about this in person.
   clickOnce = 1;    // prevents this from being run on next click
   seconds = 0;        // reset to 0 for timer
   clickedTiles = [];   // blank array stores names of clicked images
@@ -58,6 +66,7 @@ function startGame() {
   // buildBoard();
   if (tileStatus == "flipped") {
     // buildBoard();
+    // AM: Creative jQuery selector!
     $("[id^='tile']").addClass("flipped");
   }  else {
     $("[id^='tile']").removeClass("flipped");
@@ -94,10 +103,10 @@ function clickTile(cellID) {
 // }
 function gameWon() {
   clearInterval(timerid);
-  document.getElementById("timer").innerHTML = seconds;
   alert("You've won! It only took you " + seconds + " seconds");
 }
 var updateTime = function() {
-  document.getElementById("timer").innerHTML = seconds;
+  // $("timer").text(seconds);
   seconds+=1;
+  document.getElementById("timer").innerHTML = seconds;
 }

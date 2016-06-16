@@ -1,3 +1,5 @@
+/* AM: I left some comments in here before I realized `test.css` is the active stylesheet. */
+
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 body {
   font-family: Droid Sans;
@@ -5,8 +7,9 @@ body {
 /*.container {
   /*width: 100px;
   height: 100px;*/
-  position: relative;
-  perspective: 800px;
+  /* AM: These properties are going to cause some problems if they're left hanging here in this incomplete selector. */
+  /*position: relative;
+  perspective: 800px;*/
 }*/
 #main {
   min-height: 600px;
@@ -32,6 +35,8 @@ body {
   border: 1px solid blue;
   text-align: center;
 }
+/* AM: In response to your question, when creating main sections of the page -- in this page left, center and right -- I find it help to give them widths based on percentage. */
+/* AM: So in the case that you want `center` to take up most of the page, you could set right, center and left to 10%, 80% and 10% respectively. Or something along those lines. */
 #main > .left {
   margin: 4px;
   padding: 5px;
@@ -80,6 +85,7 @@ body {
   text-transform: uppercase;
   display: none;
 }
+/* AM: I would remove commented-out code from your final submission. If you want to keep it, consider placing it in a separate branch. */
 /*#start :hover {
 cursor: pointer; cursor: hand;
 }*/

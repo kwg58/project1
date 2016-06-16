@@ -1,7 +1,10 @@
+/* AM: Please remove commented-out CSS from your final submission. It hurts code readability. You can keep it in a separate branch if you'd like. */
+/* AM: (You'll come to realize I'm a broken record when it comes to this) */
+
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 body {
   font-family: Droid Sans;
-  background-color: tan;
+  background-color: #FFF7e5;
 }
 #wrapper {
   width: 1000px;
@@ -13,9 +16,10 @@ header {
   /*width: 440px;
   height: 50px;
   /*border: 1px solid red;*/
+  width: 800px;
   font-size: 20px;
   font-style:oblique;
-  color: red;
+  color: #d12325;
   text-align:center;*/
   height: 50px;
   /*border-bottom: 2px dotted black;*/
@@ -41,16 +45,20 @@ footer {
 }
 /* container for content columns*/
 #container {
+  width: 100%;
   display: block;
   /*margin: 50px 150px;*/
-  background-color: tan;
+  background-color: #FFF7e5;
   /*border-radius: 20px;*/
-  height: 500px;
-  min-height: 500px;
+  /*height: 500px;*/
+  min-height: 550px;
   width:  1000px;
   /*border: 1px solid red;*/
 }
 /* leftmost content column*/
+
+/* AM: Ah, so you do make use of percentage widths in THIS stylesheet. */
+/* AM: Been fiddling around with the CSS but can't get it positioned properly...YET. Will keep working on this. */
 #container > .left {
   display: inline-block;
   width: 20%;
@@ -62,7 +70,9 @@ footer {
 #container > .center {
   display: inline-block;
   width: 50%;
-  height: inherit;
+  min-height: 550px;
+  /*height: inherit;*/
+  margin-top: 0;
   /*border: 1px solid green;*/
 }
 /* rightmost content column*/
@@ -81,25 +91,27 @@ border: 1px solid blue;
 #timer {
   /*background-color: #4CAF50; /* Green */*/
   border: none;
-  color: black;
+  color: #d12325;
   padding: 1px 1px;
   text-align: center;
   text-decoration: none;
   display: block;
-  font-size: 20px;
+  font-size: 30px;
   margin: 0 auto;
 }
 #start {
-  background-color: #4CAF50; /* Green */
+  background-color: #d12325; /* Green */
   border: none;
   color: white;
   padding: 2px 2px;
   text-align: center;
   text-decoration: none;
   display: block;
-  font-size: 16px;
+  font-size: 30px;
   margin: 0 auto;
   top: 15px;
+  display: inline-block;
+  margin-top: 10%;
 }
 #start .clicked {
   // fade the button out/make it go away
@@ -111,17 +123,17 @@ border: 1px solid blue;
   margin: 1px;
   /*border: 1px solid #73AD21;*/
   /*background-color: green;*/
-  background-image: url('../images/bc-100.png');
+  background-image: url('../images/bc2-100.jpg');
 }
 [id*='tile'] {
   /*border: 1px solid red;*/
 }
-.container {
+/*.container {
   width: 440px;
   position: relative;
   perspective: 800px;
   border: 1px solid green;
-}
+}*/
 [id*='tile'] {
   width: 100px;
   height: 100px;
