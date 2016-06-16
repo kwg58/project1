@@ -1,3 +1,6 @@
+/* AM: Please remove commented-out CSS from your final submission. It hurts code readability. You can keep it in a separate branch if you'd like. */
+/* AM: (You'll come to realize I'm a broken record when it comes to this) */
+
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 body {
   font-family: Droid Sans;
@@ -42,6 +45,7 @@ footer {
 }
 /* container for content columns*/
 #container {
+  width: 100%;
   display: block;
   /*margin: 50px 150px;*/
   background-color: #FFF7e5;
@@ -52,6 +56,9 @@ footer {
   /*border: 1px solid red;*/
 }
 /* leftmost content column*/
+
+/* AM: Ah, so you do make use of percentage widths in THIS stylesheet. */
+/* AM: Been fiddling around with the CSS but can't get it positioned properly...YET. Will keep working on this. */
 #container > .left {
   display: inline-block;
   width: 20%;

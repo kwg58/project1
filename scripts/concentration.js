@@ -1,3 +1,5 @@
+// AM: FYI I made some comments in here before I realized this was not the script file actually being used in your game.
+
 $( document ).ready(function() {
   startGame();
   imagesInput = [
@@ -33,6 +35,7 @@ function startGame() {
 
 }
 function clickTile(cellID) {
+  // AM: I would also remove-commented out code like this from your final submission. Otherwise it hurts code readability.
   // if (clickedOnce = 0) {
   //   startGame();
   // }
